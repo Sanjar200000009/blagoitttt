@@ -1,0 +1,1276 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+p {
+    background: black;
+    color: rgb(58, 47, 47);
+    font-size: 22px;
+}
+
+body {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 80px;
+    justify-content: center;
+    align-items: center;
+    background: #0f1012;
+    z-index: 1000;
+}
+
+.header_container {
+    display: flex;
+    width: 95%;
+    height: 100%;
+    max-width: 1200px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_logo {
+    height: 100%;
+    display: flex;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_logo img {
+    height: 50%;
+}
+
+nav {
+    display: flex;
+    width: auto;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    width: auto;
+    height: 100%;
+    justify-content: center;
+}
+
+li {
+    display: flex;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* background-color: rgb(103, 3, 19); */
+    list-style: none;
+    padding: 0 10px;
+    height: 100%;
+    cursor: pointer;
+}
+
+.link_modal {
+
+    display: flex;
+    width: 100%;
+    max-width: 950px;
+    height: 200px;
+    top: 80px;
+    position: fixed;
+    top: 80px;
+    left: 3%;
+
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+
+    visibility: hidden;
+    opacity: 0;
+    /* transition: linear .3s; */
+}
+
+.link_modal span {
+    opacity: 0;
+    transition: linear .3s;
+}
+
+li:hover span {
+    opacity: 1;
+    transition: linear .3s;
+}
+
+li:hover .link_modal {
+    visibility: visible;
+    opacity: 1;
+    /* transition: linear .3s; */
+}
+
+li a {
+    display: flex;
+    width: auto;
+
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+li a ion-icon {
+    font-size: 14px;
+    color: white;
+    transition: linear .3s;
+    margin-left: 5px;
+}
+
+li:hover ion-icon {
+    transform: rotate(180deg);
+    transition: linear .3s;
+}
+
+.contacts {
+    display: flex;
+    height: 70%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.contact_card {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+
+    padding: 0 30px;
+    background: blue;
+    border-radius: 10px;
+}
+
+.contact_card a {
+    width: 100%;
+    color: white;
+    margin: 2px 0;
+}
+
+.contact_card ion-icon {
+    position: absolute;
+    right: 10px;
+    font-size: 14px;
+    color: white;
+    transition: linear .3s;
+}
+
+.contact_card:hover ion-icon {
+    transform: rotate(180deg);
+    transition: linear .3s;
+}
+
+/* СҮРӨТТӨГҮ БӨЛҮКТҮН СТИЛДЕРИ (ЖАҢЫРТЫЛДЫ) */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 60vh;
+    padding: 150px;
+    box-sizing: border-box;
+}
+
+.hero-content {
+    max-width: 800px;
+    text-align: left;
+
+}
+
+.hero-content h1 {
+    font-size: 88px;
+    /* ТАМГАНЫН КАЛЫҢДЫГЫ ӨЗГӨРТҮЛДҮ */
+    font-weight: 600;
+    /* Semi-bold */
+    margin: 0 0 20px 0;
+    line-height: 1.1;
+    color: #ffffff;
+    /* Таза ак түс */
+    text-align: left;
+}
+
+.hero-content p {
+    font-size: 18px;
+    /* ТАМГАНЫН КАЛЫҢДЫГЫ ӨЗГӨРТҮЛДҮ */
+    font-weight: 400;
+    /* Regular */
+    color: #a3a3a3;
+    /* Сүрөткө жакыныраак боз түс */
+    margin: 0 0 40px 0;
+    line-height: 1.5;
+}
+
+.cta-button {
+    background-color: #0d61ff;
+    /* Сүрөткө жакыныраак көк түс */
+    color: #ffffff;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 30px;
+    font-size: 16px;
+    /* ТАМГАНЫН КАЛЫҢДЫГЫ ӨЗГӨРТҮЛДҮ */
+    font-weight: 500;
+    /* Medium */
+    cursor: pointer;
+    text-transform: lowercase;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #004fe6;
+}
+
+
+.blokc3 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0 20px 0;
+}
+
+.blokc2 {
+    margin-top: 0 !important;
+}
+
+.blokc3_conrtainer {
+    display: flex;
+    width: 95%;
+    max-width: 1400px;
+    justify-content: space-between;
+}
+
+.blokc3_card {
+    display: flex;
+    width: 32%;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+    transition: linear .3s;
+
+    background-color: #1a1a1b;
+    border-radius: 10px;
+    color: white;
+}
+
+.blokc2 .blokc3_card {
+    width: 49%;
+}
+
+.blokc3_card h1 {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.blokc3_card p {
+    margin-top: 10px;
+    background-color: #1a1a1b;
+}
+
+.icon {
+    margin-top: 30px;
+    width: 100%;
+    text-align: right;
+}
+
+.icon ion-icon {
+    transform: rotate(50deg);
+    font-size: 22px;
+}
+
+@media screen and (max-width: 750px) {
+    .blokc3_conrtainer {
+        flex-wrap: wrap;
+    }
+
+    .blokc3_card {
+        width: 49%;
+        margin-bottom: 20px;
+    }
+
+    .blokc3_card:nth-child(3) {
+        width: 100% !important;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    body .blokc3_card {
+        width: 100% !important;
+    }
+}
+
+
+
+h2 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: #a1a1a1;
+    text-align: left;
+}
+
+.steps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.step {
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 8px;
+    padding: 0 40px 10px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    min-height: 180px;
+}
+
+.step-number {
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+    min-width: 40px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.step-text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #d6d6d6;
+}
+
+/* --- ЖАҢЫ БӨЛҮК: ТЕХНОЛОГИЯЛАР --- */
+
+.tech-section {
+    background-color: #000000;
+    padding: 40px 0;
+    /* Бөлүктүн ички боштугу */
+}
+
+.tech-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 100px;
+}
+
+.tech-pills {
+    display: flex;
+    flex-wrap: wrap;
+    /* Кичине экранда ылдыйга түшөт */
+    gap: 15px;
+    /* Элементтердин аралыгы */
+}
+
+.tech-pill {
+    background-color: #0d60fe;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 50px;
+    /* Толук тегерек четтер */
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* --- ЖАҢЫ БӨЛҮК: АРТЫКЧЫЛЫКТАР --- */
+
+.benefits-section {
+    background-color: #000000;
+    padding: 80px 0;
+}
+
+.benefits-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 100px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 колонкалуу торчо */
+    gap: 25px;
+}
+
+.benefit-card {
+    background-color: #1f1e1e;
+    padding: 35px;
+    border-radius: 12px;
+    border: 1px solid #000000;
+    /* Билинбеген көк чек */
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.benefit-card:hover {
+    border-color: #000000;
+    /* Курсорду алып барганда чеги көрүнүктүү болот */
+    transform: translateY(-5px);
+}
+
+.benefit-card h3 {
+    color: #6ea2ff;
+    /* Ачык көк түс */
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: lowercase;
+    /* Кичинекей тамгалар */
+    margin: 0 0 15px 0;
+}
+
+.benefit-card p {
+    color: #a0a0a0;
+    font-size: 16px;
+    line-height: 1.7;
+    margin: 0;
+    background-color: #10101000;
+}
+
+
+/* --- АДАПТАЦИЯ (уландысы) --- */
+
+/* Планшеттер үчүн (1024px чейин) */
+@media (max-width: 1024px) {
+
+    .tech-container,
+    .benefits-container {
+        padding: 0 40px;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+        /* 1 колонка */
+    }
+}
+
+/* Телефондор үчүн (768px чейин) */
+@media (max-width: 768px) {
+
+    .tech-container,
+    .benefits-container {
+        padding: 0 20px;
+    }
+}
+
+
+/* --- ЖАҢЫ БӨЛҮК: БААЛАР --- */
+
+.pricing-section {
+    background-color: #000000;
+    padding: 80px 0 120px 0;
+    /* Аягында көбүрөөк боштук калтырабыз */
+}
+
+.pricing-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 100px;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.pricing-card {
+    background-color: #1f1d1d;
+    padding: 40px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* Элементтерди үстү жана астына жайгаштырат */
+    min-height: 280px;
+}
+
+.pricing-card h3 {
+    color: #6ea2ff;
+    /* Көк түс */
+    font-size: 28px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* .pricing-details {
+    margin-top: 20px; /* Башкы жазуудан ылдый жылдыруу */
+
+.pricing-details p {
+    color: #a0a0a0;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0 0 5px 0;
+    background-color: #10101000;
+}
+
+
+/* --- АДАПТАЦИЯ (уландысы) --- */
+
+@media (max-width: 1024px) {
+    .pricing-container {
+        padding: 0 40px;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        /* 1 колонка */
+    }
+}
+
+@media (max-width: 768px) {
+    .pricing-container {
+        padding: 0 20px;
+    }
+}
+
+
+/* --- ЖАҢЫ БӨЛҮК: ПОРТФОЛИО (КЕЙСЫ) --- */
+
+.portfolio-section {
+    background-color: #000000;
+    padding: 80px 0 120px 0;
+}
+
+.portfolio-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 100px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.portfolio-item {
+    display: block;
+    border-radius: 12px;
+    overflow: hidden;
+    /* Сүрөттүн четтери да тегерек болушу үчүн */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.02);
+    /* Сүрөттү бир аз чоңойтот */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    /* Көлөкө кошот */
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Сүрөттү пропорциясын сактап, алкакты толтурат */
+    display: block;
+    /* Сүрөттүн астындагы боштукту кетирет */
+}
+
+.show-more-btn {
+    display: block;
+    width: 100%;
+    background-color: #0d60fe;
+    color: #fff;
+    text-align: center;
+    padding: 18px 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    margin-top: 40px;
+    /* Торчо менен баскычтын аралыгы */
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.show-more-btn:hover {
+    background-color: #0052e0;
+    /* Курсорду алып баргандагы түс */
+}
+
+
+/* --- АДАПТАЦИЯ (уландысы) --- */
+
+@media (max-width: 1024px) {
+    .portfolio-container {
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-container {
+        padding: 0 20px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        /* 1 колонка */
+    }
+}
+
+
+/* --- ЖАҢЫ БӨЛҮК: БИЗ ЖӨНҮНДӨ (О НАС) --- */
+
+.about-section {
+    background-color: #000000;
+    padding: 80px 0 120px 0;
+}
+
+.about-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 100px;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    /* Сол колонка бир аз кененирээк */
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 100px;
+    /* Логотиптерге чейинки боштук */
+}
+
+.about-text h3 {
+    color: #6ea2ff;
+    font-size: 42px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1.3;
+    margin: 0 0 25px 0;
+}
+
+.about-text p {
+    color: #a0a0a0;
+    line-height: 1.7;
+    font-size: 16px;
+    max-width: 500px;
+    background-color: #10101000;
+}
+
+.about-badges {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.badge {
+    background-color: rgba(13, 96, 254, 0.1);
+    border: 1px solid #0d60fe;
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.logo-slider {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-track {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    /* Логотиптердин аралыгы */
+    overflow: hidden;
+    /* JavaScript менен жылдыруу үчүн */
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.logo-item {
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+    /* Боз түс */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.slider-arrow {
+    background: transparent;
+    border: 1px solid #333;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+    flex-shrink: 0;
+    /* Кичирейбейт */
+}
+
+.slider-arrow:hover {
+    border-color: #fff;
+}
+
+.next-arrow svg {
+    transform: rotate(180deg);
+}
+
+/* --- САЙТТЫН АЯГЫ (FOOTER) --- */
+.site-footer {
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid #222;
+    background-color: #0d0d0d;
+}
+
+.site-footer p {
+    margin: 0;
+    color: #a82c2c;
+    font-size: 14px;
+}
+
+
+/* --- АДАПТАЦИЯ (уландысы) --- */
+@media (max-width: 1024px) {
+    .about-container {
+        padding: 0 40px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        /* 1 колонка */
+    }
+}
+
+@media (max-width: 768px) {
+    .about-container {
+        padding: 0 20px;
+    }
+
+    .logo-track {
+        gap: 30px;
+        justify-content: flex-start;
+        /* Кичине экранда башынан баштоо */
+    }
+
+    .slider-arrow {
+        display: none;
+        /* Кичине экранда жебелерди жашыруу */
+    }
+}
+
+
+
+/* --- ЖАҢЫ БӨЛҮК: СЫН-ПИКИРЛЕР (ОТЗЫВЫ) --- */
+
+.testimonial-section {
+    background-color: #000000;
+    padding: 80px 0 120px 0;
+}
+
+.testimonial-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 100px;
+}
+
+.testimonial-slider {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    /* Оң колонка кененирээк */
+    gap: 25px;
+    align-items: stretch;
+    /* Бийиктиктери бирдей болот */
+}
+
+.testimonial-video {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    min-height: 450px;
+    background-image: url('https://images.pexels.com/photos/777001/pexels-photo-777001.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-position: center;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    /* Сүрөттү бир аз күңүрттөө */
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.play-button:hover {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.video-tag {
+    align-self: flex-start;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.video-caption {
+    align-self: flex-start;
+    color: #fff;
+}
+
+.video-caption .name {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.video-caption .title {
+    display: block;
+    font-size: 15px;
+    color: #ccc;
+}
+
+.testimonial-content {
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.testimonial-nav {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    display: flex;
+    gap: 10px;
+}
+
+.testimonial-nav .slider-arrow {
+    background-color: #2a2a2a;
+}
+
+.testimonial-nav .slider-arrow.active {
+    background-color: #0d60fe;
+    border-color: #0d60fe;
+}
+
+
+.testimonial-text h3 {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #fff;
+    max-width: 90%;
+}
+
+.read-more-link {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 4px;
+    align-self: flex-start;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.read-more-link:hover {
+    color: #6ea2ff;
+    border-color: #6ea2ff;
+}
+
+/* --- АДАПТАЦИЯ (уландысы) --- */
+@media (max-width: 1024px) {
+    .testimonial-container {
+        padding: 0 40px;
+    }
+
+    .testimonial-slider {
+        grid-template-columns: 1fr;
+        /* 1 колонка */
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial-container {
+        padding: 0 20px;
+    }
+
+    .testimonial-nav {
+        top: 25px;
+        right: 25px;
+    }
+
+    .testimonial-content {
+        padding: 25px;
+    }
+}
+
+
+
+
+
+
+
+/* --- ЖАҢЫ БӨЛҮК: КӨП БЕРИЛҮҮЧҮ СУРООЛОР (FAQ) --- */
+
+.faq-section {
+    background-color: #000000;
+    padding: 90px 0 125px 0;
+}
+
+.faq-container {
+    max-width: 900px;
+    /* Суроолордун блогу бир аз ичкерээк */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.faq-item {
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #2a2a2a;
+    transition: background-color 0.3s ease;
+}
+
+.faq-item[open] {
+    background-color: #202020;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    list-style: none;
+    /* Демейки маркерди алып салуу */
+    width: 100%;
+    color: #fff;
+}
+
+.faq-question::-webkit-details-marker {
+    display: none;
+    /* Safari үчүн маркерди алып салуу */
+}
+
+.faq-icon {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.faq-icon::before,
+.faq-icon::after {
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+}
+
+/* Горизонталдуу сызык */
+.faq-icon::before {
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    margin-top: -1px;
+}
+
+/* Вертикалдуу сызык */
+.faq-icon::after {
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    margin-left: -1px;
+}
+
+/* Суроо ачылганда (+) белгиси (-) болуп өзгөрөт */
+.faq-item[open] summary .faq-icon::after {
+    transform: rotate(90deg);
+}
+
+.faq-item[open] summary .faq-icon::before {
+    transform: rotate(180deg);
+}
+
+
+.faq-answer {
+    padding: 0 25px 25px 25px;
+    color: #a0a0a0;
+    line-height: 1.7;
+    border-top: 1px solid #2a2a2a;
+    margin: 0 25px;
+}
+
+.faq-answer p {
+    margin: 20px 0 0 0;
+    background-color: #10101000;
+    color: #a1a1a1;
+}
+
+/* --- ЖАҢЫ БӨЛҮК: БАЙЛАНЫШ ФОРМАСЫ --- */
+
+.contact-section {
+    background-color: #000000;
+    color: #fff;
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+.contact-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 60px;
+}
+
+.contact-sidebar {
+    display: flex;
+    align-items: center;
+}
+
+.telegram-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    writing-mode: vertical-rl;
+    /* Текстти вертикалдуу кылат */
+    transform: rotate(180deg);
+    /* Текстти оңдойт */
+    padding: 20px 0;
+}
+
+.contact-header {
+    margin-bottom: 40px;
+}
+
+.contact-header p {
+    margin: 0;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+.contact-header h2 {
+    margin: 10px 0 0 0;
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.contact-form .form-title {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.form-group input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 10px 0;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+}
+
+.form-group label {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    /* Лабелди басууга болбойт */
+}
+
+/* Жазып баштаганда же фокуста болгондо лабелди өйдө жылдыруу */
+.form-group input:focus+label,
+.form-group input:valid+label {
+    top: -15px;
+    font-size: 13px;
+    color: #fff;
+}
+
+.form-fieldset {
+    margin-bottom: 40px;
+}
+
+.fieldset-title {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 15px;
+}
+
+.pills-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.pills-group label {
+    display: inline-block;
+}
+
+.pills-group input {
+    display: none;
+    /* Чыныгы checkbox/radio'ну жашыруу */
+}
+
+.pills-group span {
+    display: block;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pills-group input:checked+span {
+    background-color: #fff;
+    color: #0d60fe;
+    border-color: #fff;
+}
+
+.captcha-placeholder {
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.captcha-placeholder label {
+    color: #eae1e1;
+}
+
+#robot-check {
+    width: 28px;
+    height: 28px;
+}
+
+.captcha-info {
+    color: #5f5959;
+    font-size: 13px;
+}
+
+.captcha-info small {
+    display: block;
+    color: #777;
+}
+
+.form-disclaimer {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 400px;
+    margin-top: 40px;
+}
+
+.submit-btn {
+    background: #fff;
+    border: none;
+    border-radius: 6px;
+    color: #000000;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 15px;
+}
+
+.submit-btn:hover {
+    background-color: #490ce5;
+    color: #fff;
+}
+
+
+/* --- АДАПТАЦИЯ (уландысы) --- */
+@media (max-width: 1024px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        padding: 0 40px;
+    }
+
+    .contact-sidebar {
+        display: none;
+        /* Кичине экранда telegram'ды жашыруу */
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 60px 0;
+    }
+
+    .contact-container {
+        padding: 0 20px;
+    }
+
+    .contact-header h2 {
+        font-size: 36px;
+    }
+}
